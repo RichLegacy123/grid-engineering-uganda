@@ -31,10 +31,8 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-            Mechanical, Electrical and Plumbing (MEP) Consultancy &{" "}
-            <span className="text-[#2E7D32]">Electrical Contracting</span>{" "}
-            in Uganda
-          </h1>
+  MEP Consultancy & Electrical Contracting in Uganda
+</h1>
 
           {/* Subtext */}
           <p className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl">
