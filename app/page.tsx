@@ -1,7 +1,5 @@
 
-
-            
-                      export default function Home() {
+      export default function Home() {
   const electricalServices = [
     "Design and Consulting",
     "Installation and Maintenance",
@@ -21,6 +19,63 @@
     "Energy Efficiency Solutions",
     "Project Management",
     "Inspections and Testing"
+  ];
+
+  const projects = [
+    {
+      title: "Mbarara Blood Bank Power System",
+      client: "Mbarara Blood Bank",
+      location: "Mbarara",
+      desc: "200kVA 11kV transformer and HT metering. UMEME load app, standby power. ELV fire alarm interface. Critical health facility."
+    },
+    {
+      title: "Oryx Petrol Station 3-Phase Upgrade",
+      client: "Oryx Petrol Station",
+      location: "Mubende",
+      desc: "Distribution upgrade, earthing BS 7671. Canopy lighting and fire alarm BS 5839. UMEME commissioning with zero downtime. Oil and Gas."
+    },
+    {
+      title: "Kisiita Borehole 3-Phase Transformer",
+      client: "National Water and Sewerage Corporation",
+      location: "Kakumiro Area",
+      desc: "Installation of 3-Phase Transformer for borehole water supply system. Power reliability for rural water access."
+    },
+    {
+      title: "Kikagati WTP 33kV Line Extension",
+      client: "Vinci Construction Grands Projects Uganda",
+      location: "Isingiro",
+      desc: "33kV line extension, pole installation and stringing. UMEME shutdown coordination. French EPC project."
+    },
+    {
+      title: "Kyanja Bridge HV Line Shift",
+      client: "Ambitious Construction Company",
+      location: "Kasese",
+      desc: "High voltage line shift, UMEME shutdown, rebuild, testing and re-energization IEC 60364."
+    },
+    {
+      title: "Disease Control Centre 33kV Extension",
+      client: "China National Aero-Technology",
+      location: "Sanga",
+      desc: "33kV extension works, UMEME shutdown and energization for health facility."
+    },
+    {
+      title: "China Wu Yi Quarry Power Supply",
+      client: "China Wu Yi",
+      location: "Kasambya",
+      desc: "1000kVA and 315kVA 33kV transformers. 1.8km 33kV line, HT metering. IR, ratio, oil BDV testing IEC 60076."
+    },
+    {
+      title: "33KV Power Supply Cheema - Kapkwata - Kapchorwa",
+      client: "TBEA Co LTD / Rural Electrification Agency",
+      location: "Kapchorwa District",
+      desc: "Underground cables, low voltage lines and Transformers. Accelerated Rural Electrification Programme."
+    },
+    {
+      title: "Power Supply to Kiryandongo District HQ",
+      client: "Kiryandongo District Local Government",
+      location: "Kiryandongo District",
+      desc: "Installation of 100KVA 33KV Transformer and 33KV Powerline with metering and underground cable laying."
+    }
   ];
 
   const whatsappLink = "https://wa.me/256779426183";
@@ -71,6 +126,25 @@
             {mechanicalServices.map((service, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h-[120px]">
                 <h3 className="font-semibold text-lg text-gray-900 text-center">{service}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Selected Projects</h2>
+          <p className="text-center text-gray-600 mb-10">Delivering reliable MEP and powerline solutions across Uganda since 2016</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {projects.map((project, i) => (
+              <div key={i} className="bg-white p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition">
+                <div className="mb-3">
+                  <span className="text-xs text-gray-500">{project.location}</span>
+                </div>
+                <h3 className="font-bold text-lg text-gray-900 mb-1">{project.title}</h3>
+                <p className="text-sm font-semibold text-gray-700 mb-2">{project.client}</p>
+                <p className="text-gray-600 text-sm">{project.desc}</p>
               </div>
             ))}
           </div>
@@ -136,4 +210,6 @@
       </footer>
     </main>
   );
-}
+}      
+                      
+      
