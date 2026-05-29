@@ -1,6 +1,6 @@
 
 
-export default function Page() {export default function Home() {
+export default function Home() {
   const electricalServices = [
     "Design & Consulting",
     "Installation & Maintenance", 
@@ -107,4 +107,3 @@ export default function Page() {export default function Home() {
     </main>
   )
 }
-
