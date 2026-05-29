@@ -1,5 +1,4 @@
-
-      export default function Home() {
+export default function Home() {
   const electricalServices = [
     "Design and Consulting",
     "Installation and Maintenance",
@@ -39,6 +38,12 @@
       client: "National Water and Sewerage Corporation",
       location: "Kakumiro Area",
       desc: "Installation of 3-Phase Transformer for borehole water supply system. Power reliability for rural water access."
+    },
+    {
+      title: "Kyegegwa LV Extension Works",
+      client: "Kyegegwa Rural Electricity Cooperative Society",
+      location: "Kyegegwa, Mubende",
+      desc: "Extension of poles and service works with LV single phase ABC35sqmm cables and accessories in Nabingoola, Kyegegwa, Kyetume, Apuyo, Kyenjo."
     },
     {
       title: "Kikagati WTP 33kV Line Extension",
@@ -210,6 +215,4 @@
       </footer>
     </main>
   );
-}      
-                      
-      
+}
