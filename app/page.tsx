@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Kampala Office now first */}
+      {/* Projects - Location only under Description */}
       <section id="projects" className="py-12 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Selected Projects</h2>
@@ -155,18 +155,18 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-4">
             {projects.map((project, i) => (
               <div key={i} className="bg-white p-5 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition">
-                <div className="mb-2">
-                  <span className="text-xs font-semibold text-gray-500 uppercase">Location: </span>
-                  <span className="text-xs text-gray-700">{project.location}</span>
-                </div>
                 <h3 className="font-bold text-lg text-gray-900 mb-1">{project.title}</h3>
                 <div className="mb-2">
                   <span className="text-sm font-semibold text-gray-500">Client: </span>
                   <span className="text-sm font-semibold text-gray-700">{project.client}</span>
                 </div>
-                <div>
+                <div className="mb-2">
                   <span className="text-sm font-semibold text-gray-500">Description: </span>
                   <span className="text-sm text-gray-600">{project.desc}</span>
+                </div>
+                <div>
+                  <span className="text-xs font-semibold text-gray-500">Location: </span>
+                  <span className="text-xs text-gray-600">{project.location}</span>
                 </div>
               </div>
             ))}
