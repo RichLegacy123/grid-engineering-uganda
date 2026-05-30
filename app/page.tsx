@@ -7,7 +7,8 @@ export default function Home() {
     "Smart Automation and Security",
     "UEDCL Powerlines",
     "CCTV and Data Installation",
-    "Generator Installation"
+    "Generator Installation",
+    "Solar Energy"
   ];
 
   const mechanicalServices = [
@@ -22,36 +23,74 @@ export default function Home() {
 
   const projects = [
     {
+      title: "Kampala Office Complex MEP Design",
+      client: "Private Developer",
+      location: "Kampala",
+      desc: "Full MEP design for 8-storey office building. Load calculations, cable sizing, lighting design BS 5266."
+    },
+    {
       title: "Mbarara Blood Bank Power System",
       client: "Mbarara Blood Bank",
       location: "Mbarara",
-      desc: "200kVA 11kV transformer and HT metering. UMEME load app, standby power. ELV fire alarm interface. Critical health facility.",
-      scope: "200kVA 11kV • HT metering • Fire alarm ELV interface"
+      desc: "200kVA 11kV transformer and HT metering. UMEME load app, standby power. ELV fire alarm interface. Critical health facility."
     },
     {
       title: "Oryx Petrol Station 3-Phase Upgrade",
       client: "Oryx Petrol Station",
       location: "Mubende",
-      desc: "Distribution upgrade, earthing BS 7671. Canopy lighting and fire alarm BS 5839. UMEME commissioning with zero downtime. Oil and Gas.",
-      scope: "3-phase upgrade • BS 7671 earthing • Zero downtime commissioning"
+      desc: "Distribution upgrade, earthing BS 7671. Canopy lighting and fire alarm BS 5839. UMEME commissioning with zero downtime. Oil and Gas."
+    },
+    {
+      title: "Kisiita Borehole 3-Phase Transformer",
+      client: "National Water and Sewerage Corporation",
+      location: "Kakumiro Area",
+      desc: "Installation of 3-Phase Transformer for borehole water supply system. Power reliability for rural water access."
+    },
+    {
+      title: "Kyegegwa LV Extension Works",
+      client: "Kyegegwa Rural Electricity Cooperative Society",
+      location: "Kyegegwa, Mubende",
+      desc: "Extension of poles and service works with LV single phase ABC35sqmm cables and accessories in Nabingoola, Kyegegwa, Kyetume, Apuyo, Kyenjo."
     },
     {
       title: "Kikagati WTP 33kV Line Extension",
       client: "Vinci Construction Grands Projects Uganda",
       location: "Isingiro",
-      desc: "33kV line extension, pole installation and stringing. UMEME shutdown coordination. French EPC project.",
-      scope: "33kV line extension • Pole installation • UMEME shutdown coordination"
+      desc: "33kV line extension, pole installation and stringing. UMEME shutdown coordination. French EPC project."
+    },
+    {
+      title: "Kyanja Bridge HV Line Shift",
+      client: "Ambitious Construction Company",
+      location: "Kasese",
+      desc: "High voltage line shift, UMEME shutdown, rebuild, testing and re-energization IEC 60364."
+    },
+    {
+      title: "Disease Control Centre 33kV Extension",
+      client: "China National Aero-Technology",
+      location: "Sanga",
+      desc: "33kV extension works, UMEME shutdown and energization for health facility."
     },
     {
       title: "China Wu Yi Quarry Power Supply",
       client: "China Wu Yi",
       location: "Kasambya",
-      desc: "1000kVA and 315kVA 33kV transformers. 1.8km 33kV line, HT metering. IR, ratio, oil BDV testing IEC 60076.",
-      scope: "1.8km 33kV • 1000kVA + 315kVA • IEC 60076 testing"
+      desc: "1000kVA and 315kVA 33kV transformers. 1.8km 33kV line, HT metering. IR, ratio, oil BDV testing IEC 60076."
+    },
+    {
+      title: "33KV Power Supply Cheema - Kapkwata - Kapchorwa",
+      client: "TBEA Co LTD / Rural Electrification Agency",
+      location: "Kapchorwa District",
+      desc: "Underground cables, low voltage lines and Transformers. Accelerated Rural Electrification Programme."
+    },
+    {
+      title: "Power Supply to Kiryandongo District HQ",
+      client: "Kiryandongo District Local Government",
+      location: "Kiryandongo District",
+      desc: "Installation of 100KVA 33KV Transformer and 33KV Powerline with metering and underground cable laying."
     }
   ];
 
-  const whatsappLink = "https://wa.me/256779426183?text=Hi%20Grid%20Engineering%2C%20I%20need%20a%20quote%20for";
+  const whatsappLink = "https://wa.me/256779426183";
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -61,19 +100,10 @@ export default function Home() {
         <a href="#contact" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold transition">Contact</a>
       </nav>
 
-      {/* Hero */}
+      {/* Hero - No Get a Quote button */}
       <section className="bg-gray-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide">GRID ENGINEERING UGANDA LTD</h1>
-        <p className="text-xl md:text-2xl mb-6 text-gray-200">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
-        <p className="text-lg mb-8 font-semibold text-blue-300">We are also registered UEDCL Electrical Contractors</p>
-        <a href="#contact" className="inline-block bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-lg transition">Get a Quote</a>
-      </section>
-
-      {/* UEDCL Badge */}
-      <section className="bg-blue-50 py-6 px-6">
-        <p className="text-center text-sm uppercase tracking-wide text-blue-800 font-semibold">
-          UEDCL Registered Contractor | 12+ Years 33kV/11kV | TBEA • HT metering • Fire alarm ELV interface
-        </p>
+        <p className="text-xl md:text-2xl text-gray-200">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
       </section>
 
       {/* About */}
@@ -117,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Fixed labels + reduced spacing */}
+      {/* Projects - Kampala Office now first */}
       <section id="projects" className="py-12 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Selected Projects</h2>
@@ -134,13 +164,9 @@ export default function Home() {
                   <span className="text-sm font-semibold text-gray-500">Client: </span>
                   <span className="text-sm font-semibold text-gray-700">{project.client}</span>
                 </div>
-                <div className="mb-2">
+                <div>
                   <span className="text-sm font-semibold text-gray-500">Description: </span>
                   <span className="text-sm text-gray-600">{project.desc}</span>
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-blue-700">Scope: </span>
-                  <span className="text-xs text-blue-600">{project.scope}</span>
                 </div>
               </div>
             ))}
@@ -154,18 +180,51 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-center">Get In Touch</h2>
           <p className="text-lg mb-10 text-center text-gray-300">Ready to start your project? Send us a message</p>
 
-          <div className="max-w-2xl mx-auto mb-10">
-            <a href={whatsappLink} target="_blank" className="w-full py-4 rounded-lg font-semibold text-lg text-white bg-green-600 hover:bg-green-700 transition block text-center">
-              Send Message on WhatsApp
-            </a>
-          </div>
+          <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-10">
+            <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label className="block text-sm font-semibold mb-2">Full Name *</label>
+                <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">Phone *</label>
+                <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-semibold mb-2">Email *</label>
+              <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-semibold mb-2">Service Needed</label>
+              <select name="service" className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none">
+                <option>Electrical Services</option>
+                <option>Mechanical Services</option>
+                <option>MEP Consultancy</option>
+                <option>Solar Installation</option>
+                <option>UEDCL Powerlines</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-semibold mb-2">Message *</label>
+              <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none"></textarea>
+            </div>
+
+            <button type="submit" className="w-full py-3 rounded-lg font-semibold text-lg text-white bg-blue-600 hover:bg-blue-700 transition">Send Message</button>
+          </form>
 
           <div className="text-center">
             <div className="space-y-2 text-lg mb-8 text-gray-300">
-              <p>Call: +256 779 426 183</p>
+              <p>Call: +256 779 426183</p>
               <p>Email: gridengineerings@gmail.com</p>
               <p>Plot 12 Kampala Road, Cham Tow</p>
+              <p>P.O. Box 3882, Kampala - Uganda</p>
             </div>
+            <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-lg text-white bg-blue-600 hover:bg-blue-700 transition">Chat on WhatsApp</a>
           </div>
         </div>
       </section>
