@@ -114,7 +114,7 @@ export default function Home() {
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">Vision</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              To be Uganda’s trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
+              To be Uganda's trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
             </p>
           </div>
 
@@ -126,26 +126,12 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Core Values */}
-          <div>
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 uppercase tracking-wide">Core Values</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                {title: "Safety First", desc: "Zero compromise on people, property, and compliance. Every design and install meets IEC, BS, UEDCL standards."},
-                {title: "Engineering Excellence", desc: "Expert MEP consultancy backed by accurate load calculations, BS 5266 emergency lighting, and proven designs."},
-                {title: "Innovation", desc: "Cost-effective, smart solutions. Power factor correction, optimized standby systems, efficient infrastructure that lasts."},
-                {title: "Cost Effective", desc: "Optimized designs and procurement that reduce CAPEX/OPEX without cutting corners on quality or safety."},
-                {title: "Timely Delivery", desc: "Disciplined project execution. We meet deadlines from design to commissioning because downtime costs money."},
-                {title: "Reliability", desc: "Systems that don’t fail. From blood banks to 33kV lines, we deliver infrastructure clients trust 24/7."},
-                {title: "Integrity", desc: "Transparent costing, honest timelines, ethical contracting. We say what we can do and we deliver it."},
-                {title: "Customer Focus", desc: "From design to commissioning, we partner with clients. Your project goals drive our engineering decisions."}
-              ].map((value, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow border-gray-200 hover:border-blue-600 hover:shadow-lg transition">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{value.desc}</p>
-                </div>
-              ))}
-            </div>
+          {/* Core Values - One line, no explanations */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Core Values</h2>
+            <p className="text-lg text-gray-700 font-semibold leading-relaxed">
+              Safety First, Engineering Excellence, Innovation, Cost Effective, Timely Delivery, Reliability, Integrity, Customer Focus
+            </p>
           </div>
         </div>
       </section>
