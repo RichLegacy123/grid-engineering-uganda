@@ -112,8 +112,8 @@ export default function Home() {
         <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
       </section>
 
-      {/* Vision, Mission, Core Values */}
-      <section id="about-values" className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50">
+      {/* Vision, Mission, Core Values - Light Green Background */}
+      <section id="about-values" className="py-12 sm:py-16 px-4 sm:px-6 bg-green-50">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 sm:mb-12 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Vision</h2>
@@ -151,15 +151,15 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Electrical Services - Collapsible */}
-      <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-b border-gray-200">
+      {/* Electrical Services - Collapsible - Light Green Background */}
+      <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 bg-green-50">
+        <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-b border-green-200">
           <button
             onClick={() => setShowElectrical(!showElectrical)}
             className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
-            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`}>▼</span>
+            <span className={`text-2xl text-green-600 transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`}>▼</span>
           </button>
 
           <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view electrical solutions we offer</p>
@@ -167,7 +167,7 @@ export default function Home() {
           {showElectrical && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
               {electricalServices.map((service, i) => (
-                <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
+                <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-green-200 hover:border-green-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
                   <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                 </div>
               ))}
@@ -184,7 +184,7 @@ export default function Home() {
             className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
-            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`}>▼</span>
+            <span className={`text-2xl text-green-600 transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`}>▼</span>
           </button>
 
           <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view mechanical systems we provide</p>
@@ -192,7 +192,7 @@ export default function Home() {
           {showMechanical && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
               {mechanicalServices.map((service, i) => (
-                <div key={i} className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
+                <div key={i} className="bg-green-50 p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-green-200 hover:border-green-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
                   <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                 </div>
               ))}
@@ -201,15 +201,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Collapsible + Added spacing between cards */}
-      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-gray-50">
+      {/* Projects - Collapsible + Light Green Background + Spacing */}
+      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-green-50">
         <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
           <button
             onClick={() => setShowProjects(!showProjects)}
             className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
-            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`}>▼</span>
+            <span className={`text-2xl text-green-600 transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`}>▼</span>
           </button>
 
           <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view our completed projects across Uganda since 2016</p>
@@ -217,7 +217,7 @@ export default function Home() {
           {showProjects && (
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {projects.map((project, i) => (
-                <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition mb-2">
+                <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow hover:shadow-lg border-green-200 hover:border-green-600 transition mb-2">
                   <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2 leading-snug">{project.title}</h3>
                   <div className="mb-2">
                     <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
@@ -248,22 +248,22 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-sm font-semibold mb-2">Full Name *</label>
-                <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+                <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-green-600 outline-none" />
               </div>
               <div>
                 <label className="block text-sm font-semibold mb-2">Phone *</label>
-                <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+                <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-green-600 outline-none" />
               </div>
             </div>
 
             <div className="mb-4">
               <label className="block text-sm font-semibold mb-2">Email *</label>
-              <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none" />
+              <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded focus:border-green-600 outline-none" />
             </div>
 
             <div className="mb-4">
               <label className="block text-sm font-semibold mb-2">Service Needed</label>
-              <select name="service" className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none">
+              <select name="service" className="w-full px-4 py-2 border-gray-300 rounded focus:border-green-600 outline-none">
                 <option>Electrical Services</option>
                 <option>Mechanical Services</option>
                 <option>MEP Consultancy</option>
@@ -275,10 +275,10 @@ export default function Home() {
 
             <div className="mb-6">
               <label className="block text-sm font-semibold mb-2">Message *</label>
-              <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded focus:border-blue-600 outline-none"></textarea>
+              <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded focus:border-green-600 outline-none"></textarea>
             </div>
 
-            <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white bg-blue-600 hover:bg-blue-700 transition">Send Message</button>
+            <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white bg-green-600 hover:bg-green-700 transition">Send Message</button>
           </form>
 
           <div className="text-center">
@@ -288,7 +288,7 @@ export default function Home() {
               <p>Plot 12 Kampala Road, Cham Tow</p>
               <p>P.O. Box 3882, Kampala - Uganda</p>
             </div>
-            <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white bg-blue-600 hover:bg-blue-700 transition">Chat on WhatsApp</a>
+            <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white bg-green-600 hover:bg-green-700 transition">Chat on WhatsApp</a>
           </div>
         </div>
       </section>
