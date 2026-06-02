@@ -106,9 +106,53 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-gray-200">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-16 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 text-gray-900">About Grid Engineering</h2>
+      {/* Vision, Mission, Core Values - Now comes first */}
+      <section id="about-values" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Vision */}
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">Vision</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              To be Uganda’s trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">Mission</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              To provide expert MEP consultancy and electrical contracting services with cost-effective, innovative solutions that meet global standards of safety, reliability, and timely delivery.
+            </p>
+          </div>
+
+          {/* Core Values */}
+          <div>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 uppercase tracking-wide">Core Values</h2>
+            <div className="grid md:grid-cols-4 gap-6">
+              {[
+                {title: "Safety First", desc: "Zero compromise on people, property, and compliance. Every design and install meets IEC, BS, UEDCL standards."},
+                {title: "Engineering Excellence", desc: "Expert MEP consultancy backed by accurate load calculations, BS 5266 emergency lighting, and proven designs."},
+                {title: "Innovation", desc: "Cost-effective, smart solutions. Power factor correction, optimized standby systems, efficient infrastructure that lasts."},
+                {title: "Cost Effective", desc: "Optimized designs and procurement that reduce CAPEX/OPEX without cutting corners on quality or safety."},
+                {title: "Timely Delivery", desc: "Disciplined project execution. We meet deadlines from design to commissioning because downtime costs money."},
+                {title: "Reliability", desc: "Systems that don’t fail. From blood banks to 33kV lines, we deliver infrastructure clients trust 24/7."},
+                {title: "Integrity", desc: "Transparent costing, honest timelines, ethical contracting. We say what we can do and we deliver it."},
+                {title: "Customer Focus", desc: "From design to commissioning, we partner with clients. Your project goals drive our engineering decisions."}
+              ].map((value, i) => (
+                <div key={i} className="bg-white p-6 rounded-lg shadow border-gray-200 hover:border-blue-600 hover:shadow-lg transition">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{value.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About - Now comes after VMC */}
+      <section id="about" className="py-16 px-6 max-w-4xl mx-auto bg-white">
+        <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
         <p className="text-lg text-gray-700 text-center leading-relaxed mb-4">
           Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
           We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
@@ -120,7 +164,7 @@ export default function Home() {
       {/* Electrical Services */}
       <section id="electrical" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Electrical Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 uppercase tracking-wide">Electrical Services</h2>
           <p className="text-center text-gray-600 mb-10">Professional electrical solutions tailored to your needs</p>
           <div className="grid md:grid-cols-3 gap-6">
             {electricalServices.map((service, i) => (
@@ -135,7 +179,7 @@ export default function Home() {
       {/* Mechanical Services */}
       <section id="mechanical" className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Mechanical Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
           <p className="text-center text-gray-600 mb-10">Complete mechanical systems for commercial and residential projects</p>
           <div className="grid md:grid-cols-3 gap-6">
             {mechanicalServices.map((service, i) => (
@@ -150,7 +194,7 @@ export default function Home() {
       {/* Projects - Location only under Description */}
       <section id="projects" className="py-12 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Selected Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 uppercase tracking-wide">Selected Projects</h2>
           <p className="text-center text-gray-600 mb-8">Delivering reliable MEP and powerline solutions across Uganda since 2016</p>
           <div className="grid md:grid-cols-2 gap-4">
             {projects.map((project, i) => (
@@ -177,7 +221,7 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="py-16 px-6 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Get In Touch</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center uppercase tracking-wide">Get In Touch</h2>
           <p className="text-lg mb-10 text-center text-gray-300">Ready to start your project? Send us a message</p>
 
           <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-10">
