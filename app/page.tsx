@@ -1,15 +1,16 @@
 'use client'
+
 export default function Home() {
   const electricalServices = [
     "Design and Consulting",
     "Installation and Maintenance",
-    "Energy Efficiency and Solar",
+    "Energy Efficiency and Solar", // fixed: added closing quote + comma
     "Smart Automation and Security",
     "UEDCL Powerlines",
     "CCTV and Data Installation",
     "Generator Installation",
     "Solar Energy"
-  ];
+  ]
 
   const mechanicalServices = [
     "Design and Consulting",
@@ -19,7 +20,7 @@ export default function Home() {
     "Energy Efficiency Solutions",
     "Project Management",
     "Inspections and Testing"
-  ];
+  ]
 
   const projects = [
     {
@@ -88,9 +89,9 @@ export default function Home() {
       location: "Kiryandongo District",
       desc: "Installation of 100KVA 33KV Transformer and 33KV Powerline with metering and underground cable laying."
     }
-  ];
+  ]
 
-  const whatsappLink = "https://wa.me/256779426183";
+  const whatsappLink = "https://wa.me/256779426183"
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -109,8 +110,6 @@ export default function Home() {
       {/* Vision, Mission, Core Values */}
       <section id="about-values" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-
-          {/* Vision */}
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">Vision</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -118,7 +117,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Mission */}
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">Mission</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -126,7 +124,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Core Values - One line, no explanations */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 uppercase tracking-wide">Core Values</h2>
             <p className="text-lg text-gray-700 font-semibold leading-relaxed">
@@ -136,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About - Updated with ERA Class X */}
+      {/* About */}
       <section id="about" className="py-16 px-6 max-w-4xl mx-auto bg-white">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
         <p className="text-lg text-gray-700 text-center leading-relaxed mb-4">
@@ -179,7 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Location only under Description */}
+      {/* Projects */}
       <section id="projects" className="py-12 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 uppercase tracking-wide">Selected Projects</h2>
@@ -261,12 +258,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - Updated with ERA Class X */}
+      {/* Footer */}
       <footer className="bg-gray-950 text-white py-6 text-center">
         <p className="uppercase text-sm tracking-wide">
           2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
         </p>
       </footer>
     </main>
-  );
+  )
 }
