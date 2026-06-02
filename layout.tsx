@@ -1,53 +1,74 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter'
-})
-
 export const metadata: Metadata = {
-  title: 'Grid Engineering Uganda Ltd | MEP Consultancy & UEDCL Contractor',
-  description: 'Leading MEP consultancy company in Uganda offering mechanical, electrical & plumbing solutions. Registered UEDCL electrical contractor serving Kampala and all of Uganda.',
-  keywords: 'MEP consultancy Uganda, UEDCL contractor, electrical contractor Kampala, mechanical engineering Uganda, plumbing systems design, electrical installations Uganda',
-  generator: 'v0.app',
-  openGraph: {
-    title: 'Grid Engineering Uganda Ltd | MEP Consultancy & UEDCL Contractor',
-    description: 'Leading MEP consultancy company in Uganda offering mechanical, electrical & plumbing solutions for commercial, industrial, and residential projects.',
-    type: 'website',
-    locale: 'en_UG',
+  title: 'Grid Engineering Uganda Ltd | ERA Class X MEP Contractor & UEDCL Powerlines',
+  description: 'ERA Class X licensed MEP consultancy & electrical contracting in Uganda. UEDCL registered for 33kV/11kV/LV lines, transformers, solar, CCTV. Kampala + nationwide.',
+  keywords: ['MEP contractor Uganda', 'ERA Class X contractor', 'UEDCL powerline contractor', 'electrical contractor Kampala', 'transformer installation Uganda'],
+  alternates: {
+    canonical: 'https://www.gridengineerings.com',
   },
-  icons: {
-    icon: [
+  openGraph: {
+    title: 'Grid Engineering Uganda Ltd',
+    description: 'ERA Class X MEP & Electrical Contracting in Uganda',
+    url: 'https://www.gridengineerings.com',
+    siteName: 'Grid Engineering Uganda Ltd',
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: 'https://www.gridengineerings.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Grid Engineering Uganda Ltd - MEP Contractor',
       },
     ],
-    apple: '/apple-icon.png',
+    locale: 'en_UG',
+    type: 'website',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+}
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Grid Engineering Uganda Ltd",
+  "url": "https://www.gridengineerings.com",
+  "telephone": "+256779426183",
+  "email": "gridengineerings@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot 12 Kampala Road, Cham Tow",
+    "addressLocality": "Kampala",
+    "postalCode": "3882",
+    "addressCountry": "UG"
+  },
+  "license": "ERA Class X",
+  "areaServed": "Uganda",
+  "sameAs": [
+    "https://wa.me/256779426183"
+  ]
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
+      <body className="bg-white text-gray-900 antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
