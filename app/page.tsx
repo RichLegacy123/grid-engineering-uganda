@@ -153,10 +153,10 @@ export default function Home() {
 
       {/* Electrical Services - Collapsible */}
       <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-b border-gray-200">
           <button
             onClick={() => setShowElectrical(!showElectrical)}
-            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+            className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
             <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`}>▼</span>
@@ -177,11 +177,11 @@ export default function Home() {
       </section>
 
       {/* Mechanical Services - Collapsible */}
-      <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-8 sm:mt-12">
-        <div className="max-w-6xl mx-auto">
+      <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+        <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-b border-gray-200">
           <button
             onClick={() => setShowMechanical(!showMechanical)}
-            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+            className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
             <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`}>▼</span>
@@ -201,12 +201,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Collapsible */}
-      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-gray-50 mt-8 sm:mt-12">
-        <div className="max-w-6xl mx-auto">
+      {/* Projects - Collapsible + Added spacing between cards */}
+      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
           <button
             onClick={() => setShowProjects(!showProjects)}
-            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+            className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
             <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`}>▼</span>
@@ -215,10 +215,10 @@ export default function Home() {
           <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view our completed projects across Uganda since 2016</p>
 
           {showProjects && (
-            <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {projects.map((project, i) => (
-                <div key={i} className="bg-white p-4 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition">
-                  <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1 leading-snug">{project.title}</h3>
+                <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition mb-2">
+                  <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2 leading-snug">{project.title}</h3>
                   <div className="mb-2">
                     <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
                     <span className="text-xs sm:text-sm font-semibold text-gray-700">{project.client}</span>
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white mt-8 sm:mt-12">
+      <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center uppercase tracking-wide">Get In Touch</h2>
           <p className="text-base sm:text-lg mb-8 sm:mb-10 text-center text-gray-300 max-w-2xl mx-auto">Ready to start your project? Send us a message</p>
