@@ -1,5 +1,11 @@
 'use client'
+import { useState } from 'react'
+
 export default function Home() {
+  const [showElectrical, setShowElectrical] = useState(false)
+  const [showMechanical, setShowMechanical] = useState(false)
+  const [showProjects, setShowProjects] = useState(false)
+
   const electricalServices = [
     "Design and Consulting",
     "Installation and Maintenance",
@@ -145,65 +151,95 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Electrical Services */}
+      {/* Electrical Services - Collapsible */}
       <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 sm:mb-4 text-gray-900 uppercase tracking-wide">Electrical Services</h2>
-          <p className="text-left text-gray-600 mb-6 sm:mb-10 text-sm sm:text-base max-w-3xl mx-auto">Professional electrical solutions tailored to your needs</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-            {electricalServices.map((service, i) => (
-              <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
-                <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
-              </div>
-            ))}
-          </div>
+          <button
+            onClick={() => setShowElectrical(!showElectrical)}
+            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
+            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`}>▼</span>
+          </button>
+
+          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view electrical solutions we offer</p>
+
+          {showElectrical && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+              {electricalServices.map((service, i) => (
+                <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
+                  <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Mechanical Services */}
-      <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+      {/* Mechanical Services - Collapsible */}
+      <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-8 sm:mt-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 sm:mb-4 text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
-          <p className="text-left text-gray-600 mb-6 sm:mb-10 text-sm sm:text-base max-w-3xl mx-auto">Complete mechanical systems for commercial and residential projects</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-            {mechanicalServices.map((service, i) => (
-              <div key={i} className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
-                <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
-              </div>
-            ))}
-          </div>
+          <button
+            onClick={() => setShowMechanical(!showMechanical)}
+            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
+            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`}>▼</span>
+          </button>
+
+          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view mechanical systems we provide</p>
+
+          {showMechanical && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+              {mechanicalServices.map((service, i) => (
+                <div key={i} className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition flex items-center justify-center min-h- sm:min-h-[120px]">
+                  <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-gray-50">
+      {/* Projects - Collapsible */}
+      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 bg-gray-50 mt-8 sm:mt-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 sm:mb-4 text-gray-900 uppercase tracking-wide">Selected Projects</h2>
-          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Delivering reliable MEP and powerline solutions across Uganda since 2016</p>
-          <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
-            {projects.map((project, i) => (
-              <div key={i} className="bg-white p-4 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition">
-                <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1 leading-snug">{project.title}</h3>
-                <div className="mb-2">
-                  <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
-                  <span className="text-xs sm:text-sm font-semibold text-gray-700">{project.client}</span>
+          <button
+            onClick={() => setShowProjects(!showProjects)}
+            className="w-full flex items-center justify-center gap-3 mb-4 sm:mb-6 group"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
+            <span className={`text-2xl text-blue-600 transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`}>▼</span>
+          </button>
+
+          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view our completed projects across Uganda since 2016</p>
+
+          {showProjects && (
+            <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
+              {projects.map((project, i) => (
+                <div key={i} className="bg-white p-4 rounded-lg shadow hover:shadow-lg border-gray-200 hover:border-blue-600 transition">
+                  <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1 leading-snug">{project.title}</h3>
+                  <div className="mb-2">
+                    <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
+                    <span className="text-xs sm:text-sm font-semibold text-gray-700">{project.client}</span>
+                  </div>
+                  <div className="mb-2">
+                    <span className="text-xs sm:text-sm font-semibold text-gray-500">Description: </span>
+                    <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">{project.desc}</span>
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-gray-500">Location: </span>
+                    <span className="text-xs text-gray-600">{project.location}</span>
+                  </div>
                 </div>
-                <div className="mb-2">
-                  <span className="text-xs sm:text-sm font-semibold text-gray-500">Description: </span>
-                  <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">{project.desc}</span>
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-gray-500">Location: </span>
-                  <span className="text-xs text-gray-600">{project.location}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
+      <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white mt-8 sm:mt-12">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center uppercase tracking-wide">Get In Touch</h2>
           <p className="text-base sm:text-lg mb-8 sm:mb-10 text-center text-gray-300 max-w-2xl mx-auto">Ready to start your project? Send us a message</p>
