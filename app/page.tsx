@@ -100,13 +100,13 @@ export default function Home() {
         <a href="#contact" className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold transition">Contact</a>
       </nav>
 
-      {/* Hero - No Get a Quote button */}
+      {/* Hero */}
       <section className="bg-gray-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide">GRID ENGINEERING UGANDA LTD</h1>
         <p className="text-xl md:text-2xl text-gray-200">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
       </section>
 
-      {/* Vision, Mission, Core Values - Now comes first */}
+      {/* Vision, Mission, Core Values */}
       <section id="about-values" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
 
@@ -150,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About - Now comes after VMC */}
+      {/* About - Updated with ERA Class X */}
       <section id="about" className="py-16 px-6 max-w-4xl mx-auto bg-white">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
         <p className="text-lg text-gray-700 text-center leading-relaxed mb-4">
@@ -158,7 +158,9 @@ export default function Home() {
           We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
         </p>
         <p className="text-lg font-semibold text-center mb-2 text-gray-900">In operation since 2016</p>
-        <p className="text-lg font-semibold text-center text-gray-900">Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited</p>
+        <p className="text-lg font-semibold text-center text-gray-900">
+          ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
+        </p>
       </section>
 
       {/* Electrical Services */}
@@ -273,9 +275,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer - Updated with ERA Class X */}
       <footer className="bg-gray-950 text-white py-6 text-center">
-        <p className="uppercase text-sm tracking-wide">2026 Grid Engineering Uganda Ltd. All rights reserved. | UEDCL Registered Contractor</p>
+        <p className="uppercase text-sm tracking-wide">
+          2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
+        </p>
       </footer>
     </main>
   );
