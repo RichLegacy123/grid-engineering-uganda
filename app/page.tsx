@@ -278,8 +278,7 @@ export default function Home() {
                     <option>Solar Installation</option>
                     <option>UEDCL Powerlines</option>
                     <option>Other</option>
-                  </option>
-                </select>
+                  </select>
                 </div>
                 <div className="mb-6">
                   <label className="block text-sm font-semibold mb-2">Message *</label>
