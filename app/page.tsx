@@ -104,8 +104,8 @@ export default function Home() {
   const darkGreen = "#16a34a";
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      {/* Nav - Clean, no brand name or contact button */}
+    <main className="min-h-screen bg-white text-gray-900 flex-col">
+      {/* Nav - Clean */}
       <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
 
       {/* Hero */}
@@ -114,7 +114,7 @@ export default function Home() {
         <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
       </section>
 
-      {/* Vision, Mission, Core Values - Collapsible */}
+      {/* Vision, Mission, Core Values */}
       <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
         <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
           <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About - Collapsible */}
+      {/* About */}
       <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
         <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
@@ -168,7 +168,7 @@ export default function Home() {
         )}
       </section>
 
-      {/* Electrical Services - Collapsible */}
+      {/* Electrical Services */}
       <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
         <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
           <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -188,7 +188,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mechanical Services - Collapsible */}
+      {/* Gap between Electrical and Mechanical */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
+      {/* Mechanical Services */}
       <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
           <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -208,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects - Collapsible */}
+      {/* Projects */}
       <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
         <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
           <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -240,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact - Collapsible */}
+      {/* Contact */}
       <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto">
           <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -298,16 +301,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statement above footer */}
-      <div className="bg-gray-900 text-white py-6 sm:py-8 px-4 text-center">
+      {/* Spacer to push footer down */}
+      <div className="flex-grow"></div>
+
+      {/* Footer - Now actual footer that sticks to bottom */}
+      <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
         <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
           2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
         </p>
-      </div>
-
-      {/* Footer - Minimal */}
-      <footer className="bg-gray-950 text-gray-400 py-4 text-center px-4">
-        <p className="text-xs uppercase tracking-wide">Powered by Grid Engineering Uganda Ltd</p>
       </footer>
     </main>
   );
