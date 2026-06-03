@@ -298,11 +298,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-950 text-white py-5 sm:py-6 text-center px-4">
-        <p className="uppercase text-xs sm:text-sm tracking-wide leading-relaxed">
+      {/* Statement above footer */}
+      <div className="bg-gray-900 text-white py-6 sm:py-8 px-4 text-center">
+        <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
           2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
         </p>
+      </div>
+
+      {/* Footer - Minimal */}
+      <footer className="bg-gray-950 text-gray-400 py-4 text-center px-4">
+        <p className="text-xs uppercase tracking-wide">Powered by Grid Engineering Uganda Ltd</p>
       </footer>
     </main>
   );
