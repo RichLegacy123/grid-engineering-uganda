@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Head from 'next/head'
 
 export default function Home() {
   const [showValues, setShowValues] = useState(false)
@@ -103,207 +104,249 @@ export default function Home() {
   const lightGreen = "#f0fdf4";
   const darkGreen = "#16a34a";
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ElectricalContractor",
+    "name": "Grid Engineering Uganda Ltd",
+    "description": "Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda. ERA Class X Licensed Contractor, UEDCL Registered.",
+    "url": "https://gridengineerings.com",
+    "telephone": "+256779426183",
+    "email": "gridengineerings@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 12 Kampala Road, Cham Tow",
+      "addressLocality": "Kampala",
+      "postalCode": "P.O. Box 3882",
+      "addressCountry": "UG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 0.3136,
+      "longitude": 32.5811
+    },
+    "areaServed": "Uganda",
+    "foundingDate": "2016",
+    "sameAs": [
+      whatsappLink
+    ]
+  };
+
   return (
-    <main className="min-h-screen bg-white text-gray-900 flex-col">
-      {/* Nav - Clean */}
-      <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
+    <>
+      <Head>
+        <title>Grid Engineering Uganda Ltd | MEP Consultancy & Electrical Contracting Kampala</title>
+        <meta name="description" content="ERA Class X Licensed Electrical Contractor in Uganda. MEP consultancy, electrical contracting, solar installation, UEDCL powerlines. Plot 12 Kampala Road. Call +256 779 426183" />
+        <meta name="keywords" content="MEP consultancy Uganda, electrical contractor Kampala, ERA Class X, UEDCL registered, solar installation Uganda" />
+        <link rel="canonical" href="https://gridengineerings.com" />
+      </Head>
 
-      {/* Hero */}
-      <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
-        <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
-      </section>
+      <main className="min-h-screen bg-white text-gray-900 flex-col">
+        {/* JSON-LD Schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
 
-      {/* Vision, Mission, Core Values */}
-      <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
-        <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
-          <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Vision, Mission & Core Values</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-          </button>
-          {showValues && (
-            <div>
-              <div className="mb-10 sm:mb-12 text-center">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Vision</h3>
-                <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                  To be Uganda's trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
-                </p>
-              </div>
-              <div className="mb-12 sm:mb-16 text-center">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Mission</h3>
-                <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                  To provide expert MEP consultancy and electrical contracting services with cost-effective, innovative solutions that meet global standards of safety, reliability, and timely delivery.
-                </p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase tracking-wide">Core Values</h3>
-                <p className="text-base sm:text-lg text-gray-700 font-semibold leading-relaxed max-w-4xl mx-auto">
-                  Safety First, Engineering Excellence, Innovation, Cost Effective, Timely Delivery, Reliability, Integrity, Customer Focus
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+        {/* Nav - Clean */}
+        <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
 
-      {/* About */}
-      <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
-        <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
-          <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-        </button>
-        {showAbout && (
-          <div>
-            <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed mb-4">
-              Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
-              We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
-            </p>
-            <p className="text-base sm:text-lg font-semibold text-center mb-2 text-gray-900">In operation since 2016</p>
-            <p className="text-base sm:text-lg font-semibold text-center text-gray-900">
-              ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
-            </p>
+        {/* Hero */}
+        <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
+          <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
+        </section>
+
+        {/* Vision, Mission, Core Values */}
+        <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
+            <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Vision, Mission & Core Values</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showValues && (
+              <div>
+                <div className="mb-10 sm:mb-12 text-center">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Vision</h3>
+                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    To be Uganda's trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
+                  </p>
+                </div>
+                <div className="mb-12 sm:mb-16 text-center">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Mission</h3>
+                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    To provide expert MEP consultancy and electrical contracting services with cost-effective, innovative solutions that meet global standards of safety, reliability, and timely delivery.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase tracking-wide">Core Values</h3>
+                  <p className="text-base sm:text-lg text-gray-700 font-semibold leading-relaxed max-w-4xl mx-auto">
+                    Safety First, Engineering Excellence, Innovation, Cost Effective, Timely Delivery, Reliability, Integrity, Customer Focus
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-      </section>
+        </section>
 
-      {/* Electrical Services */}
-      <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
-        <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
-          <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+        {/* About */}
+        <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
+          <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
+            <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
-          {showElectrical && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-              {electricalServices.map((service, i) => (
-                <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
-                  <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
-                </div>
-              ))}
+          {showAbout && (
+            <div>
+              <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed mb-4">
+                Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
+                We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
+              </p>
+              <p className="text-base sm:text-lg font-semibold text-center mb-2 text-gray-900">In operation since 2016</p>
+              <p className="text-base sm:text-lg font-semibold text-center text-gray-900">
+                ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
+              </p>
             </div>
           )}
-        </div>
-      </section>
+        </section>
 
-      {/* Gap between Electrical and Mechanical */}
-      <div className="h-16 sm:h-20 bg-white"></div>
-
-      {/* Mechanical Services */}
-      <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
-        <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
-          <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-          </button>
-          {showMechanical && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-              {mechanicalServices.map((service, i) => (
-                <div key={i} className="p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
-                  <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
-        <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
-          <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-          </button>
-          {showProjects && (
-            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-              {projects.map((project, i) => (
-                <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow hover:shadow-lg transition mb-2" style={{border: `1px solid #bbf7d0`}}>
-                  <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2 leading-snug">{project.title}</h3>
-                  <div className="mb-2">
-                    <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
-                    <span className="text-xs sm:text-sm font-semibold text-gray-700">{project.client}</span>
+        {/* Electrical Services */}
+        <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
+            <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showElectrical && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+                {electricalServices.map((service, i) => (
+                  <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
+                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                   </div>
-                  <div className="mb-2">
-                    <span className="text-xs sm:text-sm font-semibold text-gray-500">Description: </span>
-                    <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">{project.desc}</span>
-                  </div>
-                  <div>
-                    <span className="text-xs font-semibold text-gray-500">Location: </span>
-                    <span className="text-xs text-gray-600">{project.location}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto">
-          <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center uppercase tracking-wide">Get In Touch</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showContact? 'rotate-180' : ''}`}>▼</span>
-          </button>
-
-          {showContact && (
-            <>
-              <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-6 sm:p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-8 sm:mb-10">
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">Full Name *</label>
-                    <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">Phone *</label>
-                    <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <label className="block text-sm font-semibold mb-2">Email *</label>
-                  <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-sm font-semibold mb-2">Service Needed</label>
-                  <select name="service" className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}>
-                    <option>Electrical Services</option>
-                    <option>Mechanical Services</option>
-                    <option>MEP Consultancy</option>
-                    <option>Solar Installation</option>
-                    <option>UEDCL Powerlines</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold mb-2">Message *</label>
-                  <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}></textarea>
-                </div>
-                <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Send Message</button>
-              </form>
-
-              <div className="text-center">
-                <div className="space-y-2 text-base sm:text-lg mb-6 sm:mb-8 text-gray-300">
-                  <p>Call: +256 779 426183</p>
-                  <p>Email: gridengineerings@gmail.com</p>
-                  <p>Plot 12 Kampala Road, Cham Tow</p>
-                  <p>P.O. Box 3882, Kampala - Uganda</p>
-                </div>
-                <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Chat on WhatsApp</a>
+                ))}
               </div>
-            </>
-          )}
-        </div>
-      </section>
+            )}
+          </div>
+        </section>
 
-      {/* Spacer to push footer down */}
-      <div className="flex-grow"></div>
+        {/* Gap between Electrical and Mechanical */}
+        <div className="h-16 sm:h-20 bg-white"></div>
 
-      {/* Footer */}
-      <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
-        <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
-          2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
-        </p>
-      </footer>
-    </main>
+        {/* Mechanical Services */}
+        <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
+            <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showMechanical && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+                {mechanicalServices.map((service, i) => (
+                  <div key={i} className="p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
+                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
+            <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showProjects && (
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                {projects.map((project, i) => (
+                  <div key={i} className="bg-white p-4 sm:p-5 rounded-lg shadow hover:shadow-lg transition mb-2" style={{border: `1px solid #bbf7d0`}}>
+                    <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2 leading-snug">{project.title}</h3>
+                    <div className="mb-2">
+                      <span className="text-xs sm:text-sm font-semibold text-gray-500">Client: </span>
+                      <span className="text-xs sm:text-sm font-semibold text-gray-700">{project.client}</span>
+                    </div>
+                    <div className="mb-2">
+                      <span className="text-xs sm:text-sm font-semibold text-gray-500">Description: </span>
+                      <span className="text-xs sm:text-sm text-gray-600 leading-relaxed">{project.desc}</span>
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold text-gray-500">Location: </span>
+                      <span className="text-xs text-gray-600">{project.location}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
+          <div className="max-w-4xl mx-auto">
+            <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-center uppercase tracking-wide">Get In Touch</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showContact? 'rotate-180' : ''}`}>▼</span>
+            </button>
+
+            {showContact && (
+              <>
+                <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-6 sm:p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-8 sm:mb-10">
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label className="block text-sm font-semibold mb-2">Full Name *</label>
+                      <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold mb-2">Phone *</label>
+                      <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-sm font-semibold mb-2">Email *</label>
+                    <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-sm font-semibold mb-2">Service Needed</label>
+                    <select name="service" className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}>
+                      <option>Electrical Services</option>
+                      <option>Mechanical Services</option>
+                      <option>MEP Consultancy</option>
+                      <option>Solar Installation</option>
+                      <option>UEDCL Powerlines</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div className="mb-6">
+                    <label className="block text-sm font-semibold mb-2">Message *</label>
+                    <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}></textarea>
+                  </div>
+                  <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Send Message</button>
+                </form>
+
+                <div className="text-center">
+                  <div className="space-y-2 text-base sm:text-lg mb-6 sm:mb-8 text-gray-300">
+                    <p>Call: +256 779 426183</p>
+                    <p>Email: gridengineerings@gmail.com</p>
+                    <p>Plot 12 Kampala Road, Cham Tow</p>
+                    <p>P.O. Box 3882, Kampala - Uganda</p>
+                  </div>
+                  <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Chat on WhatsApp</a>
+                </div>
+              </>
+            )}
+          </div>
+        </section>
+
+        {/* Spacer to push footer down */}
+        <div className="flex-grow"></div>
+
+        {/* Footer */}
+        <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
+          <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
+            2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
+          </p>
+        </footer>
+      </main>
+    </>
   );
 }
