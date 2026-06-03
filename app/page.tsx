@@ -105,11 +105,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      {/* Nav */}
-      <nav className="bg-gray-900 text-white px-4 py-3 sm:py-4 flex items-center justify-between sticky top-0 z-50 shadow-md">
-        <span className="font-bold text-base sm:text-xl uppercase tracking-wide">Grid Engineering Uganda Ltd</span>
-        <a href="#contact" className="px-3 sm:px-4 py-2 rounded font-semibold transition text-sm sm:text-base" style={{backgroundColor: darkGreen}}>Contact</a>
-      </nav>
+      {/* Nav - Clean, no brand name or contact button */}
+      <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
 
       {/* Hero */}
       <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
