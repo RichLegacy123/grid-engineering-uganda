@@ -121,7 +121,6 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Vision, Mission & Core Values</h2>
             <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
-          <p className="text-center text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view our vision, mission and core values</p>
           {showValues && (
             <div>
               <div className="mb-10 sm:mb-12 text-center">
@@ -153,7 +152,6 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
           <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
         </button>
-        <p className="text-center text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">Tap above to learn about us</p>
         {showAbout && (
           <div>
             <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed mb-4">
@@ -175,7 +173,6 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
             <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
-          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view electrical solutions we offer</p>
           {showElectrical && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
               {electricalServices.map((service, i) => (
@@ -198,7 +195,6 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
             <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
-          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view mechanical systems we provide</p>
           {showMechanical && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
               {mechanicalServices.map((service, i) => (
@@ -218,7 +214,6 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
             <span className={`text-2xl transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
-          <p className="text-left text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-3xl mx-auto">Tap above to view our completed projects across Uganda since 2016</p>
           {showProjects && (
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {projects.map((project, i) => (
@@ -250,7 +245,6 @@ export default function Home() {
             <h2 className="text-2xl sm:text-3xl font-bold text-center uppercase tracking-wide">Get In Touch</h2>
             <span className={`text-2xl transition-transform duration-300 ${showContact? 'rotate-180' : ''}`}>▼</span>
           </button>
-          <p className="text-center text-gray-300 mb-8 sm:mb-10 text-base sm:text-lg max-w-2xl mx-auto">Tap above to send us a message</p>
 
           {showContact && (
             <>
@@ -304,7 +298,7 @@ export default function Home() {
       {/* Spacer to push footer down */}
       <div className="flex-grow"></div>
 
-      {/* Footer - Now actual footer that sticks to bottom */}
+      {/* Footer */}
       <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
         <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
           2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
