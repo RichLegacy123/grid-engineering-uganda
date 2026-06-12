@@ -11,13 +11,14 @@ export default function Home() {
   const [showContact, setShowContact] = useState(false)
 
   const electricalServices = [
-    "Design and Consulting",
-    "Installation and Maintenance",
-    "Energy Efficiency and Solar",
-    "Smart Automation and Security",
-    "UEDCL Powerlines",
-    "CCTV and Data Installation",
-    "Generator Installation",
+    "Electrical Installation Design",
+    "CCTV Installation",
+    "Access Control",
+    "Structured Cabling",
+    "Voice and Data",
+    "Fire Alarm and Evacuation Systems",
+    "IT Infrastructure Design",
+    "Powerlines Construction",
     "Solar Energy"
   ];
 
@@ -100,7 +101,7 @@ export default function Home() {
     }
   ];
 
-  const whatsappLink = "https://wa.me/256779426183";
+  const whatsappLink = "https://wa.me/256762411230";
   const lightGreen = "#f0fdf4";
   const darkGreen = "#16a34a";
 
@@ -110,7 +111,7 @@ export default function Home() {
     "name": "Grid Engineering Uganda Ltd",
     "description": "Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda. ERA Class X Licensed Contractor, UEDCL Registered.",
     "url": "https://gridengineerings.com",
-    "telephone": "+256779426183",
+    "telephone": "+256762411230",
     "email": "gridengineerings@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -126,16 +127,14 @@ export default function Home() {
     },
     "areaServed": "Uganda",
     "foundingDate": "2016",
-    "sameAs": [
-      whatsappLink
-    ]
+    "sameAs": [whatsappLink]
   };
 
   return (
     <>
       <Head>
         <title>Grid Engineering Uganda Ltd | MEP Consultancy & Electrical Contracting Kampala</title>
-        <meta name="description" content="ERA Class X Licensed Electrical Contractor in Uganda. MEP consultancy, electrical contracting, solar installation, UEDCL powerlines. Plot 12 Kampala Road. Call +256 779 426183" />
+        <meta name="description" content="ERA Class X Licensed Electrical Contractor in Uganda. MEP consultancy, electrical contracting, solar installation, UEDCL powerlines. Plot 12 Kampala Road. Call +256 762 411230" />
         <meta name="keywords" content="MEP consultancy Uganda, electrical contractor Kampala, ERA Class X, UEDCL registered, solar installation Uganda" />
         <link rel="canonical" href="https://gridengineerings.com" />
       </Head>
@@ -218,7 +217,7 @@ export default function Home() {
             {showElectrical && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
                 {electricalServices.map((service, i) => (
-                  <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                   </div>
                 ))}
@@ -240,7 +239,7 @@ export default function Home() {
             {showMechanical && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
                 {mechanicalServices.map((service, i) => (
-                  <div key={i} className="p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h- sm:min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                   </div>
                 ))}
@@ -294,51 +293,48 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
                     <div>
                       <label className="block text-sm font-semibold mb-2">Full Name *</label>
-                      <input type="text" name="name" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                      <input type="text" name="name" required className="w-full px-4 py-2 border rounded outline-none" style={{borderColor: '#d1d5db'}} />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold mb-2">Phone *</label>
-                      <input type="tel" name="phone" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                      <input type="tel" name="phone" required className="w-full px-4 py-2 border rounded outline-none" style={{borderColor: '#d1d5db'}} />
                     </div>
                   </div>
                   <div className="mb-4">
                     <label className="block text-sm font-semibold mb-2">Email *</label>
-                    <input type="email" name="email" required className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}} />
+                    <input type="email" name="email" required className="w-full px-4 py-2 border rounded outline-none" style={{borderColor: '#d1d5db'}} />
                   </div>
                   <div className="mb-4">
                     <label className="block text-sm font-semibold mb-2">Service Needed</label>
-                    <select name="service" className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}>
+                    <select name="service" className="w-full px-4 py-2 border rounded outline-none" style={{borderColor: '#d1d5db'}}>
                       <option>Electrical Services</option>
                       <option>Mechanical Services</option>
                       <option>MEP Consultancy</option>
                       <option>Solar Installation</option>
-                      <option>UEDCL Powerlines</option>
+                      <option>Powerlines Construction</option>
                       <option>Other</option>
                     </select>
                   </div>
                   <div className="mb-6">
                     <label className="block text-sm font-semibold mb-2">Message *</label>
-                    <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border-gray-300 rounded outline-none" style={{borderColor: '#d1d5db'}}></textarea>
+                    <textarea name="message" rows={4} required placeholder="Tell us about your project..." className="w-full px-4 py-2 border rounded outline-none" style={{borderColor: '#d1d5db'}}></textarea>
                   </div>
                   <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Send Message</button>
                 </form>
 
                 <div className="text-center">
                   <div className="space-y-2 text-base sm:text-lg mb-6 sm:mb-8 text-gray-300">
-                    <p>Call: +256 779 426183</p>
+                    <p>Call: +256 762 411230</p>
                     <p>Email: gridengineerings@gmail.com</p>
                     <p>Plot 12 Kampala Road, Cham Tow</p>
                     <p>P.O. Box 3882, Kampala - Uganda</p>
                   </div>
-                  <a href={whatsappLink} target="_blank" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Chat on WhatsApp</a>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Chat on WhatsApp</a>
                 </div>
               </>
             )}
           </div>
         </section>
-
-        {/* Spacer to push footer down */}
-        <div className="flex-grow"></div>
 
         {/* Footer */}
         <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
