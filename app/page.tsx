@@ -215,9 +215,9 @@ export default function Home() {
               <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showElectrical && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
                 {electricalServices.map((service, i) => (
-                  <div key={i} className="bg-white p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="bg-white p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                   </div>
                 ))}
@@ -237,9 +237,9 @@ export default function Home() {
               <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showMechanical && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
                 {mechanicalServices.map((service, i) => (
-                  <div key={i} className="p-4 sm:p-6 rounded-lg shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
                   </div>
                 ))}
