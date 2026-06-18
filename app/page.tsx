@@ -105,7 +105,7 @@ export default function Home() {
 
   const galleryImages = [
     {
-      src: "/images/IMG-20241111-WA0054(1).jpg",
+      src: "/images/IMG-20241111-WA0054-1.jpg",
       alt: "Project photo from Kikagati site"
     }
   ];
