@@ -105,16 +105,8 @@ export default function Home() {
 
   const galleryImages = [
     {
-      src: "/images/kikagati-pole-delivery.jpg",
-      alt: "Grid Engineering team coordinating delivery of electrical poles for overhead line extension"
-    },
-    {
-      src: "/images/kyanja-pole-top.jpg",
-      alt: "Pole top assembly with insulators and conductor jumpers, HT line works"
-    },
-    {
-      src: "/images/sanga-double-pole.jpg",
-      alt: "Completed 33kV double pole line installation in rural Uganda"
+      src: "/images/IMG-20241111-WA0054(1).jpg",
+      alt: "Project photo from Kikagati site"
     }
   ];
 
