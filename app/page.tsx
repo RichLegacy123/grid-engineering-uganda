@@ -105,6 +105,18 @@ export default function Home() {
 
   const galleryImages = [
     {
+      src: "/images/kikagati-pole-delivery.jpg",
+      alt: "Grid Engineering team coordinating delivery of electrical poles for overhead line extension"
+    },
+    {
+      src: "/images/kyanja-pole-top.jpg",
+      alt: "Pole top assembly with insulators and conductor jumpers, HT line works"
+    },
+    {
+      src: "/images/sanga-double-pole.jpg",
+      alt: "Completed 33kV double pole line installation in rural Uganda"
+    },
+    {
       src: "/images/IMG-20241111-WA0054-1.jpg",
       alt: "Project photo from Kikagati site"
     }
@@ -149,22 +161,18 @@ export default function Home() {
       </Head>
 
       <main className="min-h-screen bg-white text-gray-900 flex-col">
-        {/* JSON-LD Schema for Google */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
 
-        {/* Nav - Clean */}
         <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
 
-        {/* Hero */}
         <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
           <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
         </section>
 
-        {/* Vision, Mission, Core Values */}
         <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
             <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -196,7 +204,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About */}
         <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
           <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
             <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
@@ -216,7 +223,6 @@ export default function Home() {
           )}
         </section>
 
-        {/* Electrical Services */}
         <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
             <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -235,10 +241,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gap between Electrical and Mechanical */}
         <div className="h-16 sm:h-20 bg-white"></div>
 
-        {/* Mechanical Services */}
         <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
             <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -257,7 +261,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects */}
         <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
             <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -288,7 +291,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gallery */}
         <section id="gallery" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
             <button onClick={() => setShowGallery(!showGallery)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -302,9 +304,10 @@ export default function Home() {
                     <Image
                       src={img.src}
                       alt={img.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      width={800}
+                      height={600}
+                      className="w-full h-64 object-cover"
+                      unoptimized={true}
                     />
                   </div>
                 ))}
@@ -313,7 +316,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact */}
         <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
           <div className="max-w-4xl mx-auto">
             <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
@@ -370,7 +372,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
         <footer className="bg-gray-950 text-white py-6 sm:py-8 text-center px-4 mt-auto">
           <p className="uppercase text-sm sm:text-base tracking-wide leading-relaxed">
             2026 Grid Engineering Uganda Ltd. All rights reserved. | ERA Class X Licensed Contractor | UEDCL Registered Contractor
