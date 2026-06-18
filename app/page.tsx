@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   const [showValues, setShowValues] = useState(false)
@@ -8,6 +9,7 @@ export default function Home() {
   const [showElectrical, setShowElectrical] = useState(false)
   const [showMechanical, setShowMechanical] = useState(false)
   const [showProjects, setShowProjects] = useState(false)
+  const [showGallery, setShowGallery] = useState(false)
   const [showContact, setShowContact] = useState(false)
 
   const electricalServices = [
@@ -98,6 +100,21 @@ export default function Home() {
       client: "Kiryandongo District Local Government",
       location: "Kiryandongo District",
       desc: "Installation of 100KVA 33KV Transformer and 33KV Powerline with metering and underground cable laying."
+    }
+  ];
+
+  const galleryImages = [
+    {
+      src: "/images/kikagati-pole-delivery.jpg",
+      alt: "Grid Engineering team coordinating delivery of electrical poles for overhead line extension"
+    },
+    {
+      src: "/images/kyanja-pole-top.jpg",
+      alt: "Pole top assembly with insulators and conductor jumpers, HT line works"
+    },
+    {
+      src: "/images/sanga-double-pole.jpg",
+      alt: "Completed 33kV double pole line installation in rural Uganda"
     }
   ];
 
@@ -272,6 +289,31 @@ export default function Home() {
                       <span className="text-xs font-semibold text-gray-500">Location: </span>
                       <span className="text-xs text-gray-600">{project.location}</span>
                     </div>
+                  </div>
+                  ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section id="gallery" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
+            <button onClick={() => setShowGallery(!showGallery)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Project Gallery</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showGallery? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showGallery && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {galleryImages.map((img, i) => (
+                  <div key={i} className="relative w-full h-64 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
                 ))}
               </div>
