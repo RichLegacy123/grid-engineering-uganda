@@ -11,6 +11,7 @@ export default function Home() {
   const [showProjects, setShowProjects] = useState(false)
   const [showGallery, setShowGallery] = useState(false)
   const [showContact, setShowContact] = useState(false)
+  const [showClients, setShowClients] = useState(false)
 
   const electricalServices = [
     "Electrical Installation Design",
@@ -46,6 +47,18 @@ export default function Home() {
       client: "Mbarara Blood Bank",
       location: "Mbarara",
       desc: "200kVA 11kV transformer and HT metering. UMEME load app, standby power. ELV fire alarm interface. Critical health facility."
+    },
+    {
+      title: "Gulu Blood Bank Power System",
+      client: "Gulu Blood Bank",
+      location: "Gulu",
+      desc: "200kVA 11kV transformer and HT metering. UMEME load app, standby power. ELV fire alarm interface. Critical health facility."
+    },
+    {
+      title: "Generator Design and Installation",
+      client: "Kiryandongo District Headquarters",
+      location: "Kiryandongo",
+      desc: "Installation of 3 phase 80kVA generator with ATS."
     },
     {
       title: "Oryx Petrol Station 3-Phase Upgrade",
@@ -101,6 +114,22 @@ export default function Home() {
       location: "Kiryandongo District",
       desc: "Installation of 100KVA 33KV Transformer and 33KV Powerline with metering and underground cable laying."
     }
+  ];
+
+  const clients = [
+    "Mbarara Blood Bank",
+    "Gulu Blood Bank",
+    "Kiryandongo District Headquarters",
+    "Kiryandongo District Local Government",
+    "National Water and Sewerage Corporation",
+    "Kyegegwa Rural Electricity Cooperative Society",
+    "Vinci Construction Grands Projects Uganda",
+    "Ambitious Construction Company",
+    "China National Aero-Technology",
+    "China Wu Yi",
+    "TBEA Co LTD / Rural Electrification Agency",
+    "Oryx Petrol Station",
+    "National Housing Construction Company"
   ];
 
   const galleryImages = [
@@ -286,6 +315,24 @@ export default function Home() {
                     </div>
                   </div>
                   ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section id="clients" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
+            <button onClick={() => setShowClients(!showClients)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Our Clients</h2>
+              <span className={`text-2xl transition-transform duration-300 ${showClients? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+            </button>
+            {showClients && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {clients.map((client, i) => (
+                  <div key={i} className="bg-gray-50 p-4 rounded-lg border-gray-200 text-center">
+                    <p className="font-semibold text-gray-800">{client}</p>
+                  </div>
+                ))}
               </div>
             )}
           </div>
