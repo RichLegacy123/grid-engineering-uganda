@@ -135,19 +135,19 @@ export default function Home() {
   const galleryImages = [
     {
       src: "/images/kikagati-pole-delivery.jpg",
-      alt: "Grid Engineering team coordinating delivery of electrical poles for overhead line extension"
+      alt: "Pole delivery at Kikagati"
     },
     {
       src: "/images/kyanja-pole-top.jpg",
-      alt: "Pole top assembly with insulators and conductor jumpers, HT line works"
+      alt: "Pole top assembly"
     },
     {
       src: "/images/sanga-double-pole.jpg",
-      alt: "Completed 33kV double pole line installation in rural Uganda"
+      alt: "33kV double pole line"
     },
     {
       src: "/images/IMG-20241111-WA0054-1.jpg",
-      alt: "Project photo from Kikagati site"
+      alt: "Kikagati site works"
     }
   ];
 
@@ -199,32 +199,32 @@ export default function Home() {
 
         <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
-          <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
+          <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
         </section>
 
         <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
-            <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Vision, Mission & Core Values</h2>
               <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showValues && (
               <div>
-                <div className="mb-10 sm:mb-12 text-center">
+                <div className="mb-10 sm:mb-12">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Vision</h3>
-                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl leading-relaxed">
                     To be Uganda's trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
                   </p>
                 </div>
-                <div className="mb-12 sm:mb-16 text-center">
+                <div className="mb-12 sm:mb-16">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Mission</h3>
-                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 max-w-3xl leading-relaxed">
                     To provide expert MEP consultancy and electrical contracting services with cost-effective, innovative solutions that meet global standards of safety, reliability, and timely delivery.
                   </p>
                 </div>
-                <div className="text-center">
+                <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase tracking-wide">Core Values</h3>
-                  <p className="text-base sm:text-lg text-gray-700 font-semibold leading-relaxed max-w-4xl mx-auto">
+                  <p className="text-base sm:text-lg text-gray-700 font-semibold leading-relaxed max-w-4xl">
                     Safety First, Engineering Excellence, Innovation, Cost Effective, Timely Delivery, Reliability, Integrity, Customer Focus
                   </p>
                 </div>
@@ -234,18 +234,18 @@ export default function Home() {
         </section>
 
         <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
-          <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
+          <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">About Grid Engineering</h2>
             <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
           </button>
           {showAbout && (
             <div>
-              <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                 Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
                 We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
               </p>
-              <p className="text-base sm:text-lg font-semibold text-center mb-2 text-gray-900">In operation since 2016</p>
-              <p className="text-base sm:text-lg font-semibold text-center text-gray-900">
+              <p className="text-base sm:text-lg font-semibold mb-2 text-gray-900">In operation since 2016</p>
+              <p className="text-base sm:text-lg font-semibold text-gray-900">
                 ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
               </p>
             </div>
@@ -254,15 +254,15 @@ export default function Home() {
 
         <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
-            <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Electrical Services</h2>
               <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showElectrical && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
                 {electricalServices.map((service, i) => (
-                  <div key={i} className="bg-white p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
-                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
+                  <div key={i} className="bg-white p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
+                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 leading-snug">{service}</h3>
                   </div>
                 ))}
               </div>
@@ -274,15 +274,15 @@ export default function Home() {
 
         <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
-            <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Mechanical Services</h2>
               <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showMechanical && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
                 {mechanicalServices.map((service, i) => (
-                  <div key={i} className="p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center justify-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
-                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 text-center leading-snug">{service}</h3>
+                  <div key={i} className="p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
+                    <h3 className="font-semibold text-base sm:text-lg text-gray-900 leading-snug">{service}</h3>
                   </div>
                 ))}
               </div>
@@ -292,7 +292,7 @@ export default function Home() {
 
         <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
-            <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Selected Projects</h2>
               <span className={`text-2xl transition-transform duration-300 ${showProjects? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
@@ -322,14 +322,14 @@ export default function Home() {
 
         <section id="clients" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
-            <button onClick={() => setShowClients(!showClients)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowClients(!showClients)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Our Clients</h2>
               <span className={`text-2xl transition-transform duration-300 ${showClients? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showClients && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {clients.map((client, i) => (
-                  <div key={i} className="bg-gray-50 p-4 rounded-lg border-gray-200 text-center">
+                  <div key={i} className="bg-gray-50 p-4 rounded-lg border-gray-200 text-left">
                     <p className="font-semibold text-gray-800">{client}</p>
                   </div>
                 ))}
@@ -340,7 +340,7 @@ export default function Home() {
 
         <section id="gallery" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
-            <button onClick={() => setShowGallery(!showGallery)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
+            <button onClick={() => setShowGallery(!showGallery)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide">Project Gallery</h2>
               <span className={`text-2xl transition-transform duration-300 ${showGallery? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
@@ -365,14 +365,14 @@ export default function Home() {
 
         <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
           <div className="max-w-4xl mx-auto">
-            <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center justify-center gap-3 mb-6 sm:mb-8 group">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center uppercase tracking-wide">Get In Touch</h2>
+            <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
+              <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide">Get In Touch</h2>
               <span className={`text-2xl transition-transform duration-300 ${showContact? 'rotate-180' : ''}`}>▼</span>
             </button>
 
             {showContact && (
               <>
-                <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-6 sm:p-8 rounded-xl shadow-lg max-w-2xl mx-auto mb-8 sm:mb-10">
+                <form action="mailto:gridengineerings@gmail.com" method="post" encType="text/plain" className="bg-white text-gray-900 p-6 sm:p-8 rounded-xl shadow-lg max-w-2xl mb-8 sm:mb-10">
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
                     <div>
                       <label className="block text-sm font-semibold mb-2">Full Name *</label>
@@ -405,7 +405,7 @@ export default function Home() {
                   <button type="submit" className="w-full py-3 rounded-lg font-semibold text-base sm:text-lg text-white transition" style={{backgroundColor: darkGreen}}>Send Message</button>
                 </form>
 
-                <div className="text-center">
+                <div>
                   <div className="space-y-2 text-base sm:text-lg mb-6 sm:mb-8 text-gray-300">
                     <p>Call: +256 762 411230</p>
                     <p>Email: gridengineerings@gmail.com</p>
