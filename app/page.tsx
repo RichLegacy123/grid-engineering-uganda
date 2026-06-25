@@ -200,8 +200,8 @@ export default function Home() {
         <nav className="bg-gray-900 h-3 sm:h-4 sticky top-0 z-50 shadow-md"></nav>
 
         <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
-          <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">"Powering Uganda Engineered to Last"</p>
         </section>
 
         <section id="vision-mission-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
