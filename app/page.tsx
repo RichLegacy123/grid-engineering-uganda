@@ -233,7 +233,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
+        <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white mt-12 sm:mt-16">
           <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">About Grid Engineering</h2>
             <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
@@ -252,7 +252,7 @@ export default function Home() {
           )}
         </section>
 
-        <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+        <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 mt-12 sm:mt-16" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
             <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Electrical Services</h2>
@@ -270,7 +270,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+        <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-2 sm:mt-3">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
             <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Mechanical Services</h2>
@@ -288,7 +288,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+        <section id="projects" className="py-10 sm:py-12 px-4 sm:px-6 mt-12 sm:mt-16" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12">
             <button onClick={() => setShowProjects(!showProjects)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Selected Projects</h2>
@@ -318,7 +318,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="clients" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+        <section id="clients" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-12 sm:mt-16">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
             <button onClick={() => setShowClients(!showClients)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Our Clients</h2>
@@ -336,7 +336,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="gallery" className="py-10 sm:py-16 px-4 sm:px-6 bg-white">
+        <section id="gallery" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-12 sm:mt-16">
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
             <button onClick={() => setShowGallery(!showGallery)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Project Gallery</h2>
@@ -361,7 +361,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white">
+        <section id="contact" className="py-10 sm:py-16 px-4 sm:px-6 bg-gray-900 text-white mt-12 sm:mt-16">
           <div className="max-w-4xl mx-auto">
             <button onClick={() => setShowContact(!showContact)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide pl-4">Get In Touch</h2>
