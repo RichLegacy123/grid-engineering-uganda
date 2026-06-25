@@ -204,6 +204,26 @@ export default function Home() {
           <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">"Powering Uganda Engineered to Last"</p>
         </section>
 
+        {/* About Section - MOVED ABOVE VISION/MISSION/VALUES */}
+        <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
+          <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">About Grid Engineering</h2>
+            <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+          </button>
+          {showAbout && (
+            <div className="space-y-4 pl-4">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
+                We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
+              </p>
+              <p className="text-base sm:text-lg font-semibold text-gray-900">In operation since 2016</p>
+              <p className="text-base sm:text-lg font-semibold text-gray-900">
+                ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
+              </p>
+            </div>
+          )}
+        </section>
+
         <section id="vision-mission-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
           <div className="max-w-6xl mx-auto pb-8 sm:pb-12 space-y-6" style={{borderBottom: `1px solid #bbf7d0`}}>
 
@@ -255,35 +275,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white mt-12 sm:mt-16">
-          <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">About Grid Engineering</h2>
-            <span className={`text-2xl transition-transform duration-300 ${showAbout? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-          </button>
-          {showAbout && (
-            <div className="space-y-4 pl-4">
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                Grid Engineering Uganda Ltd provides professional MEP consultancy and electrical contracting services.
-                We deliver safe, efficient, and reliable solutions for residential, commercial, and industrial projects across Uganda.
-              </p>
-              <p className="text-base sm:text-lg font-semibold text-gray-900">In operation since 2016</p>
-              <p className="text-base sm:text-lg font-semibold text-gray-900">
-                ERA Class X Licensed Contractor | Certified and Registered with UEDCL - Uganda Electricity Distribution Company Limited
-              </p>
-            </div>
-          )}
-        </section>
-
         <section id="electrical" className="py-10 sm:py-16 px-4 sm:px-6 mt-12 sm:mt-16" style={{backgroundColor: lightGreen}}>
-          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-green-200">
             <button onClick={() => setShowElectrical(!showElectrical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Electrical Services</h2>
               <span className={`text-2xl transition-transform duration-300 ${showElectrical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showElectrical && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 pl-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 pl-4 border-green-200">
                 {electricalServices.map((service, i) => (
-                  <div key={i} className="bg-white p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center min-h-[120px]" style={{border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="bg-white p-4 sm:p-6 flex items-center min-h-[120px] border-b border-r border-green-200 last:border-b-0 sm:[&:nth-child(2n)]:border-r-0 md:[&:nth-child(3n)]:border-r-0">
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 leading-snug">{service}</h3>
                   </div>
                 ))}
@@ -293,15 +294,15 @@ export default function Home() {
         </section>
 
         <section id="mechanical" className="py-10 sm:py-16 px-4 sm:px-6 bg-white mt-2 sm:mt-3">
-          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #e5e7eb`}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12 border-gray-200">
             <button onClick={() => setShowMechanical(!showMechanical)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Mechanical Services</h2>
               <span className={`text-2xl transition-transform duration-300 ${showMechanical? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
             </button>
             {showMechanical && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 pl-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 pl-4 border-green-200">
                 {mechanicalServices.map((service, i) => (
-                  <div key={i} className="p-4 sm:p-6 shadow hover:shadow-lg transition flex items-center min-h-[120px]" style={{backgroundColor: lightGreen, border: `1px solid #bbf7d0`}}>
+                  <div key={i} className="p-4 sm:p-6 flex items-center min-h-[120px] border-b border-r border-green-200 last:border-b-0 sm:[&:nth-child(2n)]:border-r-0 md:[&:nth-child(3n)]:border-r-0" style={{backgroundColor: lightGreen}}>
                     <h3 className="font-semibold text-base sm:text-lg text-gray-900 leading-snug">{service}</h3>
                   </div>
                 ))}
