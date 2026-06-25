@@ -4,6 +4,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Home() {
+  const [showVision, setShowVision] = useState(false)
+  const [showMission, setShowMission] = useState(false)
   const [showValues, setShowValues] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
   const [showElectrical, setShowElectrical] = useState(false)
@@ -202,34 +204,54 @@ export default function Home() {
           <p className="text-base sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">Mechanical, Electrical and Plumbing MEP Consultancy and Electrical Contracting in Uganda</p>
         </section>
 
-        <section id="about-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
-          <div className="max-w-6xl mx-auto pb-8 sm:pb-12" style={{borderBottom: `1px solid #bbf7d0`}}>
-            <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Vision, Mission & Core Values</h2>
-              <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
-            </button>
-            {showValues && (
-              <div className="space-y-8 pl-4">
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Vision</h3>
+        <section id="vision-mission-values" className="py-10 sm:py-16 px-4 sm:px-6" style={{backgroundColor: lightGreen}}>
+          <div className="max-w-6xl mx-auto pb-8 sm:pb-12 space-y-6" style={{borderBottom: `1px solid #bbf7d0`}}>
+
+            {/* Vision */}
+            <div>
+              <button onClick={() => setShowVision(!showVision)} className="w-full flex items-center gap-3 mb-4 group">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Vision</h2>
+                <span className={`text-2xl transition-transform duration-300 ${showVision? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+              </button>
+              {showVision && (
+                <div className="pl-4">
                   <p className="text-base sm:text-lg text-gray-700 max-w-3xl leading-relaxed">
                     To be Uganda's trusted MEP consultancy and electrical contracting partner, delivering world-class infrastructure that powers communities and industries.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase tracking-wide">Mission</h3>
+              )}
+            </div>
+
+            {/* Mission */}
+            <div>
+              <button onClick={() => setShowMission(!showMission)} className="w-full flex items-center gap-3 mb-4 group">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Mission</h2>
+                <span className={`text-2xl transition-transform duration-300 ${showMission? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+              </button>
+              {showMission && (
+                <div className="pl-4">
                   <p className="text-base sm:text-lg text-gray-700 max-w-3xl leading-relaxed">
                     To provide expert MEP consultancy and electrical contracting services with cost-effective, innovative solutions that meet global standards of safety, reliability, and timely delivery.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase tracking-wide">Core Values</h3>
+              )}
+            </div>
+
+            {/* Core Values */}
+            <div>
+              <button onClick={() => setShowValues(!showValues)} className="w-full flex items-center gap-3 mb-4 group">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">Core Values</h2>
+                <span className={`text-2xl transition-transform duration-300 ${showValues? 'rotate-180' : ''}`} style={{color: darkGreen}}>▼</span>
+              </button>
+              {showValues && (
+                <div className="pl-4">
                   <p className="text-base sm:text-lg text-gray-700 font-semibold leading-relaxed max-w-4xl">
                     Safety First, Engineering Excellence, Innovation, Cost Effective, Timely Delivery, Reliability, Integrity, Customer Focus
                   </p>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
+
           </div>
         </section>
 
