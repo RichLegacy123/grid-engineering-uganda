@@ -201,7 +201,7 @@ export default function Home() {
 
         <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">,,Reliable Timely & Cost Effective,,</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">,,Reliable Timely & Cost Effective</p>
         </section>
 
         {/* About Section - ABOVE VISION/MISSION/VALUES */}
