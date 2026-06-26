@@ -201,10 +201,10 @@ export default function Home() {
 
         <section className="bg-gray-900 text-white py-16 sm:py-20 px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 uppercase tracking-wide leading-tight">GRID ENGINEERING UGANDA LTD</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">"Powering Uganda Engineered to Last"</p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 tracking-wide">,,Reliable Timely & Cost Effective,,</p>
         </section>
 
-        {/* About Section - MOVED ABOVE VISION/MISSION/VALUES */}
+        {/* About Section - ABOVE VISION/MISSION/VALUES */}
         <section id="about" className="py-10 sm:py-16 px-4 sm:px-6 max-w-4xl mx-auto bg-white">
           <button onClick={() => setShowAbout(!showAbout)} className="w-full flex items-center gap-3 mb-6 sm:mb-8 group">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-wide pl-4">About Grid Engineering</h2>
